@@ -1,0 +1,65 @@
+/* Home.css */
+
+/* Global styles for the entire app/page */
+
+/* General styling for body or container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Hyperlink styles */
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  /* Home Page Styles */
+  
+  /* Home page container */
+  .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+      "top"
+      "middle"
+      "bottom";
+    gap: 20px;
+  }
+  
+  /* Top Section Styles */
+  .top-section {
+    grid-area: top;
+    background-color: #fff; /* White background color for the top section */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* Middle Section Styles */
+  .middle-section {
+    grid-area: middle;
+    background-color: #fff; /* White background color for the middle section */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* Bottom Section Styles */
+  .bottom-section {
+    grid-area: bottom;
+    background-color: #fff; /* White background color for the bottom section */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* Adjust section styling as needed */
+  

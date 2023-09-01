@@ -1,0 +1,66 @@
+/* FeaturedMatches.css */
+
+/* Featured Matches Container */
+.section-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+  /* Section Header */
+  .section-header {
+    font-size: 32px;
+    margin-top: 0;
+    color: #007bff;
+  }
+  
+  /* Match List */
+  .match-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Match Item */
+  .match-item {
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .match-item:hover {
+    background-color: #ddd;
+  }
+  
+  /* Active Match Item */
+  .match-item.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Match Details */
+  .match-details {
+    margin-top: 20px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Links (if you have any) */
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  

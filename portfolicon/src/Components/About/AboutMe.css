@@ -1,0 +1,66 @@
+/* Component-specific styles for the AboutMe component */
+
+/* About Me Container */
+.about-me-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff; /* White background for the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #333; /* Text color for the component */
+  }
+  
+  /* Section Header */
+  .section-header {
+    font-size: 32px;
+    margin-top: 0;
+    color: #007bff; /* Use the global link color for consistency */
+  }
+  
+  /* Subsection Header */
+  .subsection-header {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  /* About Me Text */
+  .about-me-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  /* Links (if you have any) */
+  a {
+    color: #007bff; /* Use the global link color for consistency */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3; /* Use the global link hover color for consistency */
+  }
+  
+  /* Add some animations to make it dynamic */
+  .about-me-container {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
