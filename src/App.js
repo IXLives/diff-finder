@@ -19,7 +19,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path='player-stats' element={<PlayerList />} />
           <Route path='team-stats' element={<TeamList />} />
-          <Home />
         </Routes>
       </div>
     </Router>

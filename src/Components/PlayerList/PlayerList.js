@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PlayerModal from './PlayerModal';
+import axios from 'axios';
 import './PlayerList.css'; // Import the PlayerList-specific CSS
 
 const PlayerList = () => {
@@ -8,57 +9,13 @@ const PlayerList = () => {
   const [playerSlug, setPlayerSlug] = useState(null);
 
   useEffect(() => {
-    const fetchPlayerData = async () => {
-      try {
-        const response = await fetch(
-          'https://cors-anywhere.herokuapp.com/https://api.pandascore.co/lol/players?Page[Size]=100',
-          {
-            method: 'GET',
-            mode: 'cors',
-            headers: {
-              Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
-            },
-          }
-        );
-  
-        if (!response.ok) {
-          throw new Error('Failed to fetch player data');
-        }
-  
-        const data = await response.json();
-        setPlayerList(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-  
-    fetchPlayerData();
+    const fetchPlayerData = axios.get('/api/players').then(response => {
+      const data = response.data
+      setPlayerList(data)
+    }).catch(error => {
+      console.error('Error is:', error);
+    })
   }, []);
-
-  const getPlayerInfo = async (slug) => {
-    try {
-      const response = await fetch(
-        `https://api.pandascore.co/lol/players/${slug}/stats`,
-        {
-          method: 'GET',
-          mode: 'cors',
-          headers: {
-            Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch player data');
-      }
-
-      const data = await response.json();
-      console.log('data is: ', data);
-      setPlayerList(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
   
 
   return (
@@ -95,7 +52,7 @@ const PlayerList = () => {
       </ul>
       {selectedPlayer && (
         <PlayerModal
-          player={getPlayerInfo(selectedPlayer)}
+          player={selectedPlayer}
           playerDetails={selectedPlayer}
           onClose={() => setSelectedPlayer(null)}
         />

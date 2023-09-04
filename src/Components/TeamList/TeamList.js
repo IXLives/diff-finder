@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import TeamModal from './TeamModal';
 import './TeamList.css'; // Import the TeamList-specific CSS
 
@@ -8,55 +9,13 @@ const TeamList = () => {
   const [teamSlug, setTeamSlug] = useState(null);
 
   useEffect(() => {
-    const fetchTeamData = async () => {
-      try {
-        const response = await fetch(
-          'https://cors-anywhere.herokuapp.com/https://api.pandascore.co/lol/teams?Page[Size]=100',
-          {
-            method: 'GET',
-            mode: 'cors',
-            headers: {
-              Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
-            },
-          }
-        );
-  
-        if (!response.ok) {
-          throw new Error('Failed to fetch team data');
-        }
-  
-        const data = await response.json();
-        setTeamList(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-  
-    fetchTeamData();
+    const fetchTeamData = axios.get('/api/teams').then(response => {
+      const data = response.data
+      setTeamList(data)
+    }).catch(error => {
+      console.error('Error is:', error);
+    })
   }, []);
-
-  const getTeamInfo = async (slug) => {
-    try {
-      const response = await fetch(
-        `https://api.pandascore.co/lol/teams/${slug}/stats`,
-        {
-          method: 'GET',
-          headers: {
-            Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch team data');
-      }
-
-      const data = await response.json();
-      setTeamList(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
   
 
   return (
@@ -93,7 +52,7 @@ const TeamList = () => {
       </ul>
       {selectedTeam && (
         <TeamModal
-          team={getTeamInfo(teamSlug)}
+          team={selectedTeam}
           teamDetails={selectedTeam}
           onClose={() => setSelectedTeam(null)}
         />
