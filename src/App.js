@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Navigation />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/*" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='player-stats' element={<PlayerList />} />
