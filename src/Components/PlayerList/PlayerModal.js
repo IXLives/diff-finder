@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import './PlayerModal.css';
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 const PlayerModal = ({ player, playerDetails, onClose }) => {
   useEffect(() => {
     // Add an event listener to the modal overlay to close the modal when clicked outside
@@ -35,16 +39,16 @@ const PlayerModal = ({ player, playerDetails, onClose }) => {
             )}
           <p>Role: {playerDetails.role}</p>
         </div>
-        <div className="team-info">
+        <div className="player-info">
           <p>Team: {playerDetails.current_team.name}</p>
           <img src={playerDetails.current_team.image_url} alt={`${playerDetails.current_team.name} Logo`} />
         </div>
-        <div className="player-stats">
+        <div className="player-stats-modal">
           <h4>Stats</h4>
-          <p>Kills: {player.averages.kill_counters.players}</p>
-          <p>Assists: {player.averages.assists}</p>
-          <p>CS diff @ 14: {player.averages.cs_diff_at_14}</p>
-          <p>Deaths: {player.averages.deaths}</p>
+          <p>Kills: {getRandomInt(20)}</p>
+          <p>Assists: {getRandomInt(40)}</p>
+          <p>CS diff @ 14: {getRandomInt(10000)}</p>
+          <p>Deaths: {getRandomInt(20)}</p>
           {/* You can add more stats here */}
         </div>
         <button onClick={onClose}>Close</button>

@@ -1,65 +1,58 @@
-/* Home.css */
+/* Homepage.css */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 
-/* Global styles for the entire app/page */
+.banner {
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 0;
+  margin: 25px;
+  text-decoration: none;
+  width: 90%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
 
-/* General styling for body or container */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  /* Hyperlink styles */
-  a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #0056b3;
-  }
-  
-  /* Home Page Styles */
-  
-  /* Home page container */
-  .home-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-areas:
-      "top"
-      "middle"
-      "bottom";
-    gap: 20px;
-  }
-  
-  /* Top Section Styles */
-  .top-section {
-    grid-area: top;
-    background-color: #fff; /* White background color for the top section */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  
-  /* Middle Section Styles */
-  .middle-section {
-    grid-area: middle;
-    background-color: #fff; /* White background color for the middle section */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  
-  /* Bottom Section Styles */
-  .bottom-section {
-    grid-area: bottom;
-    background-color: #fff; /* White background color for the bottom section */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  
-  /* Adjust section styling as needed */
-  
+.banner-content {
+  flex: 1;
+  text-align: center;
+}
+
+.banner:hover {
+  transform: scale(1.05);
+}
+
+.player-stats {
+  background-image: url('../PlayerList/player-stats-image.jpg');
+}
+
+.team-stats {
+  background-image: url('../TeamList/team-stats-image.png');
+}
+
+.about {
+  background-image: url('../../../public/Assets/banner.png');
+}
+
+.contact {
+  background-image: url('../../../public/Assets/contact-image.jpg');
+}
+
+.banner h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 16px;
+  margin: 0;
+}

@@ -6,9 +6,8 @@ import AboutMe from './Components/About/AboutMe';
 import Home from './Components/Home/Home';
 import Contact from './Components/Contact/Contact';
 import './App.css'
-// import {Projects} from './components/Projects/Projects';
-// import {Contact} from './components/Contact';
-
+import PlayerList from './Components/PlayerList/PlayerList';
+import TeamList from './Components/TeamList/TeamList';
 function App() {
   return (
     <Router>
@@ -18,8 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/projects" component={Projects} />}
-          {/* Add more routes for other sections */}
+          <Route path='player-stats' element={<PlayerList />} />
+          <Route path='team-stats' element={<TeamList />} />
         </Routes>
       </div>
     </Router>

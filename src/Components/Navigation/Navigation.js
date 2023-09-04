@@ -13,6 +13,16 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="nav-item">
+          <Link to="/player-stats" className="nav-link">
+            Players
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/team-stats" className="nav-link">
+            Teams
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link to="/about" className="nav-link">
             About
           </Link>

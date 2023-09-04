@@ -2,52 +2,11 @@
 
 /* Contact Container */
 .contact-container {
-    max-width: 800px;
+    max-width: auto;
     margin: 0 auto;
-    padding: 40px;
+    padding: auto;
     background-color: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     color: #333; /* Text color for the component */
   }
-  
-  /* Section Header */
-  .section-header {
-    font-size: 32px;
-    margin-top: 0;
-    color: #007bff; /* Use the global link color for consistency */
-  }
-  
-  /* Contact Info List */
-  .contact-info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Contact Info Item */
-  .contact-info-item {
-    font-size: 18px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Info Label (e.g., "Location:") */
-  .info-label {
-    font-weight: bold;
-    margin-right: 10px;
-    width: 100px; /* Set a fixed width for labels for consistent alignment */
-  }
-  
-  /* Links (if you have any) */
-  a {
-    color: #007bff; /* Use the global link color for consistency */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #0056b3; /* Use the global link hover color for consistency */
-  }
-  

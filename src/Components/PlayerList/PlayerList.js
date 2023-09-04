@@ -51,6 +51,7 @@ const PlayerList = () => {
       }
 
       const data = await response.json();
+      console.log('data is: ', data);
       setPlayerList(data);
     } catch (error) {
       console.error(error);
@@ -92,7 +93,7 @@ const PlayerList = () => {
       </ul>
       {selectedPlayer && (
         <PlayerModal
-          player={getPlayerInfo(playerSlug)}
+          player={getPlayerInfo(selectedPlayer)}
           playerDetails={selectedPlayer}
           onClose={() => setSelectedPlayer(null)}
         />
