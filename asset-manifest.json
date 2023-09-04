@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolicon/static/css/main.edacc1ae.css",
+    "main.js": "/portfolicon/static/js/main.a7eff651.js",
+    "static/js/787.1ee4213c.chunk.js": "/portfolicon/static/js/787.1ee4213c.chunk.js",
+    "static/media/pxfuel-bg.jpg": "/portfolicon/static/media/pxfuel-bg.2fad07b554a202034303.jpg",
+    "static/media/team-stats-image.png": "/portfolicon/static/media/team-stats-image.714d961d05f91d90c201.png",
+    "static/media/player-stats-image.jpg": "/portfolicon/static/media/player-stats-image.35040553238cf589dc23.jpg",
+    "static/media/contact-image.jpg": "/portfolicon/static/media/contact-image.af2ae4d5bd54a3deb559.jpg",
+    "static/media/banner.png": "/portfolicon/static/media/banner.9789000b379e6bd6d7bc.png",
+    "static/media/card-back.png": "/portfolicon/static/media/card-back.8528591dd73022e7cb0f.png",
+    "static/media/card-front.png": "/portfolicon/static/media/card-front.4efd2de20db3d9298176.png",
+    "index.html": "/portfolicon/index.html",
+    "main.edacc1ae.css.map": "/portfolicon/static/css/main.edacc1ae.css.map",
+    "main.a7eff651.js.map": "/portfolicon/static/js/main.a7eff651.js.map",
+    "787.1ee4213c.chunk.js.map": "/portfolicon/static/js/787.1ee4213c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edacc1ae.css",
+    "static/js/main.a7eff651.js"
+  ]
+}
