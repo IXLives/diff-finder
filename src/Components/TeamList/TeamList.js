@@ -11,7 +11,7 @@ const TeamList = () => {
     const fetchTeamData = async () => {
       try {
         const response = await fetch(
-          'https://api.pandascore.co/lol/teams?Page[Size]=100',
+          'https://cors-anywhere.herokuapp.com/https://api.pandascore.co/lol/teams?Page[Size]=100',
           {
             method: 'GET',
             mode: 'cors',
