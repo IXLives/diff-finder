@@ -14,6 +14,7 @@ const PlayerList = () => {
           'https://api.pandascore.co/lol/players?Page[Size]=100',
           {
             method: 'GET',
+            mode: 'cors',
             headers: {
               Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
             },
@@ -40,6 +41,7 @@ const PlayerList = () => {
         `https://api.pandascore.co/lol/players/${slug}/stats`,
         {
           method: 'GET',
+          mode: 'cors',
           headers: {
             Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
           },

@@ -14,6 +14,7 @@ const TeamList = () => {
           'https://api.pandascore.co/lol/teams?Page[Size]=100',
           {
             method: 'GET',
+            mode: 'cors',
             headers: {
               Authorization: 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
             },
