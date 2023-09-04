@@ -8,7 +8,12 @@ const PlayerList = () => {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/players').then(response => {
+    axios.get('https://cors-anywhere.herokuapp.com/'+'https://api.pandascore.co/lol/players?Page[Size]=100', {
+      headers: {
+        'Authorization': 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
+        'Content-Type': 'application/json'
+    }
+    }).then(response => {
       const data = response.data
       setPlayerList(data)
     }).catch(error => {
