@@ -6,10 +6,9 @@ import './PlayerList.css'; // Import the PlayerList-specific CSS
 const PlayerList = () => {
   const [playerList, setPlayerList] = useState([]);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
-  const [playerSlug, setPlayerSlug] = useState(null);
 
   useEffect(() => {
-    const fetchPlayerData = axios.get('/api/players').then(response => {
+    axios.get('/api/players').then(response => {
       const data = response.data
       setPlayerList(data)
     }).catch(error => {
@@ -27,7 +26,6 @@ const PlayerList = () => {
             key={player.id}
             onClick={() => {
                 setSelectedPlayer(player)
-                setPlayerSlug(player.slug)
             }}
             className="player-list-item"
           >

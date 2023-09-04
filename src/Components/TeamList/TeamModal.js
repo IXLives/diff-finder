@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 import './TeamModal.css';
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
 const TeamModal = ({ team, teamDetails, onClose }) => {
   useEffect(() => {
     // Add an event listener to the modal overlay to close the modal when clicked outside

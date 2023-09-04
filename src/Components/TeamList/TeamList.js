@@ -6,10 +6,9 @@ import './TeamList.css'; // Import the TeamList-specific CSS
 const TeamList = () => {
   const [teamList, setTeamList] = useState([]);
   const [selectedTeam, setSelectedTeam] = useState(null);
-  const [teamSlug, setTeamSlug] = useState(null);
 
   useEffect(() => {
-    const fetchTeamData = axios.get('/api/teams').then(response => {
+    axios.get('/api/teams').then(response => {
       const data = response.data
       setTeamList(data)
     }).catch(error => {
@@ -28,7 +27,6 @@ const TeamList = () => {
             key={team.id}
             onClick={() => {
                 setSelectedTeam(team)
-                setTeamSlug(team.slug)
             }}
             className="team-list-item"
           >
