@@ -48,12 +48,12 @@
   
   /* Hover effect */
   .nav-link:hover {
-    background-color: #007bff; /* Change background color on hover */
+    background-color: #141414; /* Change background color on hover */
     transform: scale(1.05); /* Scale up the link on hover */
   }
   
   /* Active link styles */
   .nav-link.active {
-    background-color: #007bff; /* Active link background color */
+    background-color: #141414; /* Active link background color */
   }
   
