@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from './Components/Navigation/Navigation';
 import AboutMe from './Components/About/AboutMe';
 import Home from './Components/Home/Home';
@@ -20,6 +20,7 @@ function App() {
           <Route path='player-stats' element={<PlayerList />} />
           <Route path='team-stats' element={<TeamList />} />
         </Routes>
+        {/* I am pleased */}
       </div>
     </Router>
   );
