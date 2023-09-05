@@ -5,32 +5,33 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-useEffect(() => {
-  // Add an event listener to the modal overlay to close the modal when clicked outside
-  const handleOutsideClick = (event) => {
-    if (event.target === document.querySelector('.player-modal-overlay')) {
-      onClose();
-    }
-  };
-
-  // Add an event listener to the modal content to close the modal when clicked inside
-  const handleModalClick = (event) => {
-    if (event.target === document.querySelector('.player-modal')) {
-      onClose();
-    }
-  };
-
-  // Attach the event listeners when the modal is mounted
-  document.addEventListener('mousedown', handleOutsideClick);
-  document.addEventListener('mousedown', handleModalClick);
-
-  // Cleanup the event listeners when the modal is unmounted
-  return () => {
-    document.removeEventListener('mousedown', handleOutsideClick);
-    document.removeEventListener('mousedown', handleModalClick);
-  };
-}, [onClose]);
-
+const PlayerModal = ({ player, playerDetails, onClose }) => {
+  useEffect(() => {
+    // Add an event listener to the modal overlay to close the modal when clicked outside
+    const handleOutsideClick = (event) => {
+      if (event.target === document.querySelector('.team-modal-overlay')) {
+        onClose();
+      }
+    };
+  
+    // Add an event listener to the modal content to close the modal when clicked inside
+    const handleModalClick = (event) => {
+      if (event.target === document.querySelector('.team-modal')) {
+        onClose();
+      }
+    };
+  
+    // Attach the event listeners when the modal is mounted
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('mousedown', handleModalClick);
+  
+    // Cleanup the event listeners when the modal is unmounted
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('mousedown', handleModalClick);
+    };
+  }, [onClose]);
+  
 
   return (
     <div className="player-modal-overlay">
