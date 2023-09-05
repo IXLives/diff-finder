@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://ixlives.github.io/portfolicon/",
-  "proxy": "http://localhost:8080",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.17.0",
@@ -21,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node ./cors-server/app.js",
+    "server": "node ./cors-server/index.js",
     "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.8",
     "concurrently": "^8.2.1",
     "gh-pages": "^6.0.0"
   }

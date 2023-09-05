@@ -8,11 +8,7 @@ const TeamList = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
 
   useEffect(() => {
-    axios.get('https://cors-anywhere.herokuapp.com/'+'https://api.pandascore.co/lol/teams?Page[Size]=100', {
-      headers: {
-        'Authorization': 'Bearer 0Dal78X-4JNj592dV1BLVtRQLRjohRxVUhWXO2qq2EV4S0VKtWQ',
-        'Content-Type': 'application/json'
-      }}).then(response => {
+    axios.get('https://lolstats-server.fly.dev/api/players').then(response => {
       const data = response.data
       setTeamList(data)
     }).catch(error => {
