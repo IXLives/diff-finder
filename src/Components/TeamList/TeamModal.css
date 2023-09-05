@@ -25,7 +25,7 @@
     display: flex; /* Display children side by side */
     flex-direction: column; /* Stack content vertically on small screens */
     align-items: center; /* Center content horizontally */
-    max-width: 90%; /* Set maximum width to ensure responsiveness */
+    max-width: 85%; /* Set maximum width to ensure responsiveness */
     color: black;
     max-height: 90%;
     overflow-y: auto;
