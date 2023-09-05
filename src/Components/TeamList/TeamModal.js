@@ -9,15 +9,25 @@ const TeamModal = ({ team, teamDetails, onClose }) => {
         onClose();
       }
     };
-
-    // Attach the event listener when the modal is mounted
+  
+    // Add an event listener to the modal content to close the modal when clicked inside
+    const handleModalClick = (event) => {
+      if (event.target === document.querySelector('.team-modal')) {
+        onClose();
+      }
+    };
+  
+    // Attach the event listeners when the modal is mounted
     document.addEventListener('mousedown', handleOutsideClick);
-
-    // Cleanup the event listener when the modal is unmounted
+    document.addEventListener('mousedown', handleModalClick);
+  
+    // Cleanup the event listeners when the modal is unmounted
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('mousedown', handleModalClick);
     };
   }, [onClose]);
+  
 
   return (
     <div className="team-modal-overlay">

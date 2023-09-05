@@ -5,23 +5,32 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const PlayerModal = ({ player, playerDetails, onClose }) => {
-  useEffect(() => {
-    // Add an event listener to the modal overlay to close the modal when clicked outside
-    const handleOutsideClick = (event) => {
-      if (event.target === document.querySelector('.player-modal-overlay')) {
-        onClose();
-      }
-    };
+useEffect(() => {
+  // Add an event listener to the modal overlay to close the modal when clicked outside
+  const handleOutsideClick = (event) => {
+    if (event.target === document.querySelector('.player-modal-overlay')) {
+      onClose();
+    }
+  };
 
-    // Attach the event listener when the modal is mounted
-    document.addEventListener('mousedown', handleOutsideClick);
+  // Add an event listener to the modal content to close the modal when clicked inside
+  const handleModalClick = (event) => {
+    if (event.target === document.querySelector('.player-modal')) {
+      onClose();
+    }
+  };
 
-    // Cleanup the event listener when the modal is unmounted
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, [onClose]);
+  // Attach the event listeners when the modal is mounted
+  document.addEventListener('mousedown', handleOutsideClick);
+  document.addEventListener('mousedown', handleModalClick);
+
+  // Cleanup the event listeners when the modal is unmounted
+  return () => {
+    document.removeEventListener('mousedown', handleOutsideClick);
+    document.removeEventListener('mousedown', handleModalClick);
+  };
+}, [onClose]);
+
 
   return (
     <div className="player-modal-overlay">
