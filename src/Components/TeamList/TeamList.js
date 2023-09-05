@@ -8,7 +8,7 @@ const TeamList = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
 
   useEffect(() => {
-    axios.get('https://lolstats-server.fly.dev/api/players').then(response => {
+    axios.get('https://lolstats-server.fly.dev/api/teams').then(response => {
       const data = response.data
       setTeamList(data)
     }).catch(error => {

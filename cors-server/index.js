@@ -3,11 +3,8 @@ const axios = require('axios')
 const app = express();
 const cors = require('cors')
 
-app.use(cors);
-app.get('/api/players', cors({
-  origin: "https://ixlives.github.io/",
-  optionsSuccessStatus: 200
-}), async (req, res) => {
+app.use(cors());
+app.get('/api/players', async (req, res) => {
     try {
       const response = await axios.get('https://api.pandascore.co/lol/players?Page[Size]=100', {
         headers: {
@@ -22,10 +19,7 @@ app.get('/api/players', cors({
       res.status(500).json({ error: 'An error occurred while proxying the request.' });
     }
   });
-app.get('/api/teams', cors({
-  origin: "https://ixlives.github.io/",
-  optionsSuccessStatus: 200
-}), async (req, res) => {
+app.get('/api/teams', async (req, res) => {
 try {
     const response = await axios.get('https://api.pandascore.co/lol/teams?Page[Size]=100', {
         headers: {

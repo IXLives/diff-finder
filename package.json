@@ -19,7 +19,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run client",
     "server": "node ./cors-server/index.js",
     "client": "react-scripts start",
     "build": "react-scripts build",
