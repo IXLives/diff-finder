@@ -19,7 +19,7 @@
   transition: transform 0.2s;
   display: flex;
   align-items: center;
-  height: auto;
+  height: 150px;
 }
 
 .banner-content {

@@ -1,18 +1,18 @@
 /* Card.css */
 .card {
-    width: 500px;
-    height: 800px;
-    perspective: 1000px;
-    cursor: pointer;
-    padding: auto;
-    margin: auto;
-  }
+  width: 500px; /* Desktop width */
+  height: 800px; /* Desktop height */
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 auto;
+}
   
   .card-inner {
     width: 100%;
     height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    margin-top: 20%;
   }
   
   .card.flipped .card-inner {
@@ -40,5 +40,12 @@
   
   .card-back {
     transform: rotateY(180deg);
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 300px; /* Mobile width */
+      height: 480px; /* Mobile height */
+    }
   }
   
