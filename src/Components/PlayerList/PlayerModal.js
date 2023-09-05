@@ -9,14 +9,14 @@ const PlayerModal = ({ player, playerDetails, onClose }) => {
   useEffect(() => {
     // Add an event listener to the modal overlay to close the modal when clicked outside
     const handleOutsideClick = (event) => {
-      if (event.target === document.querySelector('.team-modal-overlay')) {
+      if (event.target === document.querySelector('.player-modal-overlay')) {
         onClose();
       }
     };
   
     // Add an event listener to the modal content to close the modal when clicked inside
     const handleModalClick = (event) => {
-      if (event.target === document.querySelector('.team-modal')) {
+      if (event.target === document.querySelector('.player-modal')) {
         onClose();
       }
     };
