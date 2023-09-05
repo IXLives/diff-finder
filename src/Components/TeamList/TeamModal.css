@@ -27,6 +27,8 @@
     align-items: center; /* Center content horizontally */
     max-width: 90%; /* Set maximum width to ensure responsiveness */
     color: black;
+    max-height: 90%;
+    overflow-y: auto;
   }
   
   /* PlayerModal Content */
